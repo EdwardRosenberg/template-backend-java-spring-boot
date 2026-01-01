@@ -1,6 +1,90 @@
-# Template Base
+# Template Backend Java Spring Boot
 
-A base template repository with CI/CD workflows and standardized configurations.
+A Hello World microservice built with Spring Boot 4.0.1 and Java 21.
+
+This template is derived from [template-base](https://github.com/EdwardRosenberg/template-base) and demonstrates a minimal Spring Boot backend application.
+
+## Prerequisites
+
+- Java 21 or higher
+- Maven 3.6+
+
+## Building the Application
+
+```bash
+mvn clean install
+```
+
+## Running the Application
+
+```bash
+mvn spring-boot:run
+```
+
+Or run the packaged JAR:
+
+```bash
+java -jar target/hello-world-service-0.0.1-SNAPSHOT.jar
+```
+
+## Testing
+
+Run all tests:
+
+```bash
+mvn test
+```
+
+## API Endpoints
+
+### GET /hello
+
+Returns a "Hello World!" message.
+
+**Example:**
+```bash
+curl http://localhost:8080/hello
+```
+
+**Response:**
+```
+Hello World!
+```
+
+## Configuration
+
+The application runs on port 8080 by default. You can change this in `src/main/resources/application.properties`:
+
+```properties
+server.port=8080
+spring.application.name=hello-world-service
+```
+
+## Project Structure
+
+```
+.
+├── src/
+│   ├── main/
+│   │   ├── java/com/example/helloworld/
+│   │   │   ├── HelloWorldApplication.java    # Main Spring Boot application class
+│   │   │   └── HelloWorldController.java     # REST controller with /hello endpoint
+│   │   └── resources/
+│   │       └── application.properties         # Application configuration
+│   └── test/
+│       └── java/com/example/helloworld/
+│           ├── HelloWorldApplicationTests.java   # Application context test
+│           └── HelloWorldControllerTests.java    # Controller unit tests
+├── pom.xml                                     # Maven project configuration
+└── README.md                                   # This file
+```
+
+## Technology Stack
+
+- **Spring Boot**: 4.0.1
+- **Java**: 21
+- **Build Tool**: Maven
+- **Testing**: JUnit 5, Spring Boot Test
 
 ## CI/CD
 

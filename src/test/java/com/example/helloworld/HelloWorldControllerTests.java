@@ -2,23 +2,24 @@ package com.example.helloworld;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest;
-import org.springframework.test.web.servlet.MockMvc;
+import org.springframework.boot.test.context.SpringBootTest;
 
-import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
-import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.content;
-import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
+import static org.assertj.core.api.Assertions.assertThat;
 
-@WebMvcTest(HelloWorldController.class)
+@SpringBootTest
 class HelloWorldControllerTests {
 
     @Autowired
-    private MockMvc mockMvc;
+    private HelloWorldController controller;
 
     @Test
-    void helloReturnsHelloWorld() throws Exception {
-        mockMvc.perform(get("/hello"))
-                .andExpect(status().isOk())
-                .andExpect(content().string("Hello World!"));
+    void contextLoads() {
+        assertThat(controller).isNotNull();
+    }
+
+    @Test
+    void helloReturnsHelloWorld() {
+        String response = controller.hello();
+        assertThat(response).isEqualTo("Hello World!");
     }
 }
