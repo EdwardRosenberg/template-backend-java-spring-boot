@@ -51,6 +51,54 @@ curl http://localhost:8080/hello
 Hello World!
 ```
 
+## API Documentation
+
+This application includes Swagger UI for interactive API documentation and testing.
+
+### Accessing Swagger UI
+
+Once the application is running, you can access the Swagger UI at:
+
+```
+http://localhost:8080/swagger-ui.html
+```
+
+The Swagger UI provides:
+- Interactive API documentation
+- Ability to test API endpoints directly from the browser
+- Request/response schemas
+- HTTP method details
+
+### OpenAPI Specification
+
+The OpenAPI specification (JSON format) is available at:
+
+```
+http://localhost:8080/v3/api-docs
+```
+
+You can also access the YAML format at:
+
+```
+http://localhost:8080/v3/api-docs.yaml
+```
+
+### Disabling Swagger for Production
+
+To disable Swagger UI in production environments, add the following to your `application.properties`:
+
+```properties
+springdoc.swagger-ui.enabled=false
+springdoc.api-docs.enabled=false
+```
+
+Or set the environment variable:
+
+```bash
+SPRINGDOC_SWAGGER_UI_ENABLED=false
+SPRINGDOC_API_DOCS_ENABLED=false
+```
+
 ## Configuration
 
 The application runs on port 8080 by default. You can change this in `src/main/resources/application.properties`:
@@ -85,6 +133,7 @@ spring.application.name=hello-world-service
 - **Java**: 21
 - **Build Tool**: Maven
 - **Testing**: JUnit 5, Spring Boot Test
+- **API Documentation**: Springdoc OpenAPI 2.7.0 (Swagger UI)
 
 ## CI/CD
 
