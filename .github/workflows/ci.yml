@@ -11,7 +11,7 @@ permissions:
 
 jobs:
   ci:
-    uses: EdwardRosenberg/template-base/.github/workflows/ci.yml@v1
+    uses: EdwardRosenberg/template-base/.github/workflows/ci.yml@main
     with:
       backend-enabled: true
       backend-tech-stack: "java"
