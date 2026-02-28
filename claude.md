@@ -8,7 +8,7 @@ Provide a minimal but fully functional Spring Boot application that compiles, pa
 
 ## Tech Stack
 
-- **Language**: Java 21
+- **Language**: Java 25
 - **Framework**: Spring Boot 4.0.1
 - **Build tool**: Maven (via Maven Wrapper `./mvnw`)
 - **API docs**: Springdoc OpenAPI 2.7.0 (Swagger UI at `/swagger-ui.html`)
@@ -68,7 +68,7 @@ src/test/java/com/example/helloworld/
 
 ## Java Conventions
 
-- **Java version**: 21 — use records, sealed classes, pattern matching, text blocks where appropriate
+- **Java version**: 25 — use records, sealed classes, pattern matching, text blocks where appropriate
 - **No star imports**: Checkstyle enforces `AvoidStarImport`
 - **Braces required**: Always use braces for control flow blocks
 - **Compiler warnings as errors**: `-Xlint:all -Werror` is inherited from the parent POM
@@ -119,4 +119,3 @@ Always update the version in the same commit as your functional changes.
 - Titles must follow Conventional Commits: `<type>(<scope>): <description>`
 - Run `./mvnw -B clean verify` before submitting — build must be green
 - Include test coverage for any new endpoint or service method
-
