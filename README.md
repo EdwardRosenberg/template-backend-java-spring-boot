@@ -1,12 +1,12 @@
 # Template Backend Java Spring Boot
 
-A Hello World microservice built with Spring Boot 4.0.1 and Java 21.
+A Hello World microservice built with Spring Boot 4.0.1 and Java 25.
 
 This template is derived from [template-base](https://github.com/EdwardRosenberg/template-base) and demonstrates a minimal Spring Boot backend application.
 
 ## Prerequisites
 
-- Java 21 or higher
+- Java 25 or higher
 - Maven 3.6+
 
 ## Building the Application
@@ -131,7 +131,7 @@ spring.application.name=hello-world-service
 ## Technology Stack
 
 - **Spring Boot**: 4.0.1
-- **Java**: 21
+- **Java**: 25
 - **Build Tool**: Maven
 - **Testing**: JUnit 5, Spring Boot Test
 - **API Documentation**: Springdoc OpenAPI 2.7.0 (Swagger UI)
@@ -143,7 +143,7 @@ This template uses GitHub Actions for continuous integration. The CI workflow au
 The workflow:
 - Builds the project using Maven (`mvn -B clean verify`)
 - Runs all tests (`mvn -B test`)
-- Uses Java 21 with the Temurin distribution
+- Uses Java 25 with the Temurin distribution
 - Leverages a reusable workflow from [template-base](https://github.com/EdwardRosenberg/template-base)
 
 See [`.github/workflows/ci.yml`](.github/workflows/ci.yml) for the complete configuration.
