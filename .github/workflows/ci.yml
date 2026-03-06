@@ -15,7 +15,7 @@ jobs:
     with:
       backend-enabled: true
       backend-tech-stack: "java"
-      java-version: "21"
+      java-version: "25"
       backend-build-command: "mvn -B clean verify"
       backend-test-command: "mvn -B test"
 
